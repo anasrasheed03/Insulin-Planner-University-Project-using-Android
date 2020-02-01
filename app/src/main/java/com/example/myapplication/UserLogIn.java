@@ -10,6 +10,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -88,7 +89,7 @@ public class UserLogIn extends AppCompatActivity {
         btn_login.setVisibility(View.GONE);
 
 
-        String URL_LOGIN = "http://farwa.logicalhive.com/apis/login.php";
+        String URL_LOGIN = "http://farwa.plenary-session.com/apis/login.php";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_LOGIN,
                 new Response.Listener<String>() {
                     @Override
@@ -109,7 +110,7 @@ public class UserLogIn extends AppCompatActivity {
 
                                     JSONObject object = jsonArray.getJSONObject(i);
 
-
+                                    String userName = object.getString("username").trim();
                                     //        String fname = object.getString("f_name").trim();
                                     //      String lname = object.getString("l_name").trim();
                                     String email = object.getString("email").trim();
@@ -123,6 +124,7 @@ public class UserLogIn extends AppCompatActivity {
 
                                     if (role.equals("2")) {
                                         Intent se = new Intent(UserLogIn.this,Dashboard.class);
+                                        se.putExtra("userName", userName);
                                         startActivity(se);
                                     }
 
@@ -166,8 +168,12 @@ public class UserLogIn extends AppCompatActivity {
             }
         };
 
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                5000,DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+
 
 
 

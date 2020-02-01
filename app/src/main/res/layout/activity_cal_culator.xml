@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+
+    android:textColor="@color/defaultTextColor"
+    android:background="#30D5C8"
+    >
+
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/defaultTextColor"
+        android:textSize="15sp"
+        android:layout_above="@+id/Age"
+        android:layout_alignEnd="@+id/Age"
+        android:layout_alignTop="@+id/namevar"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/Age"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/weight"
+        android:layout_alignEnd="@+id/Height"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Height"
+        android:text="Weight: (kg)"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/defaultTextColor"
+        android:textSize="15sp"
+        android:layout_alignRight="@+id/Height"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/Height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/height"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/age"
+        android:text="Height: (cm)"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/defaultTextColor"
+        android:textSize="15sp"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/Level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level Of Exercise:"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/defaultTextColor"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/Weight"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/Age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age:"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/defaultTextColor"
+        android:textSize="15sp"
+        android:layout_above="@+id/Height"
+        android:layout_below="@+id/namevar"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/Height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/Height" />
+
+    <TextView
+        android:id="@+id/Gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender: "
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/defaultTextColor"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/Name"
+        android:layout_alignParentLeft="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="41dp"
+        android:orientation ="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="41dp">
+
+        <RadioButton
+
+            android:id="@+id/Male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Gender"
+            android:layout_alignTop="@+id/Gender"
+            android:layout_marginEnd="14dp"
+            android:layout_toStartOf="@+id/Female"
+            android:checked="true"
+            android:text="Male"
+            android:textColor="@color/defaultTextColor"
+            android:textColorLink="@color/defaultTextColor"
+            android:layout_toLeftOf="@+id/Female"
+            android:layout_marginRight="14dp" />
+
+        <RadioButton
+            android:id="@+id/Female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Male"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/Gender"
+            android:layout_marginEnd="20dp"
+            android:text="Female"
+            android:textColor="@color/defaultTextColor"
+            android:textColorLink="@color/defaultTextColor"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/namevar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/radioGroup"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textColor="@color/defaultTextColor"
+        android:textColorLink="@color/defaultTextColor"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/namevar"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textColor="@color/defaultTextColor"
+        android:textColorLink="@android:color/background_light"
+        android:visibility="visible"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/height"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:textColor="@color/defaultTextColor"
+        android:textColorLink="@color/defaultTextColor"
+        android:visibility="visible"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/age"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:textColor="@color/defaultTextColor"
+        android:textColorLink="@color/defaultTextColor"
+        android:textIsSelectable="false"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:id="@+id/calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup1"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="Calculate"
+        android:textColor="?attr/actionMenuTextColor"
+        android:textColorLink="@color/defaultTextColor" />
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup1"
+        android:orientation ="vertical"
+        android:layout_below="@+id/Level"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/defaultTextColor"
+        android:textSize="10sp"
+        android:layout_alignParentLeft="true">
+
+
+        <RadioButton
+            android:id="@+id/r1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Level"
+            android:text="Little to none"
+            android:textColor="@color/defaultTextColor"
+            android:textColorLink="@color/defaultTextColor"
+            android:textSize="13sp"
+            android:layout_alignParentLeft="true" />
+
+        <RadioButton
+            android:id="@+id/r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/r1"
+            android:text="1 to 3x/week"
+            android:textColor="@color/defaultTextColor"
+            android:textColorLink="@color/defaultTextColor"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/r3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/r2"
+            android:text="3 to 5x/week"
+            android:textColor="@color/defaultTextColor"
+            android:textColorLink="@color/defaultTextColor"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/r4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/r3"
+            android:text="6 to 7x/week"
+            android:textColor="@color/defaultTextColor"
+            android:textColorLink="@color/defaultTextColor"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/r5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/r4"
+            android:text="2x/day"
+            android:textColor="@color/defaultTextColor"
+            android:textColorLink="@color/defaultTextColor"
+            android:textSize="13sp" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/result1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/calc"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/defaultTextColor"
+        android:textSize="20sp"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/Goals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goals: "
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/defaultTextColor"
+        android:textSize="15sp"
+        android:layout_below="@+id/weight"
+        android:layout_alignStart="@+id/radioGroup"
+        android:layout_alignLeft="@+id/radioGroup" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:textColor="@color/defaultTextColor"
+        android:layout_below="@+id/Goals"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/Level"
+        android:layout_toRightOf="@+id/Level"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

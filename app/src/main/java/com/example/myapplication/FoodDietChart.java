@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -51,7 +52,7 @@ public class FoodDietChart extends AppCompatActivity {
         loadProducts();
     }
 
-    private final String URL_PRODUCTS = "http://farwa.logicalhive.com/apis/foodlist.php";
+    private final String URL_PRODUCTS = "http://farwa.plenary-session.com/apis/ebooklist.php";
 
     private void loadProducts() {
 
@@ -106,6 +107,10 @@ public class FoodDietChart extends AppCompatActivity {
 
         //adding our stringrequest to queue
         Volley.newRequestQueue(this).add(stringRequest);
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                5000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
     }
 
 }

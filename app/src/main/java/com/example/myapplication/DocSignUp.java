@@ -93,7 +93,7 @@ public class DocSignUp extends AppCompatActivity {
         final String phone = this.inputphonenumber.getText().toString().trim();
         final String hospital = this.inputhospital.getText().toString().trim();
         final String specialization = this.inputspecialization.getText().toString().trim();
-        String URL_REGST = "http://farwa.logicalhive.com/apis/docsignup.php";
+        String URL_REGST = "http://farwa.plenary-session.com/apis/docsignup.php";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_REGST, new Response.Listener<String>() {
 
             @Override

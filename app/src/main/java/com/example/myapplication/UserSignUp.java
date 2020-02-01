@@ -129,7 +129,7 @@ public class UserSignUp extends AppCompatActivity {
         final String bloodgroup = this.inputbloodgroup.getText().toString().trim();
         final String dob = this.inputdob.getText().toString().trim();
 
-        String URL_REGST = "http://farwa.logicalhive.com/apis/usersignup.php";
+        String URL_REGST = "http://farwa.plenary-session.com/apis/usersignup.php";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_REGST, new Response.Listener<String>() {
 
             @Override

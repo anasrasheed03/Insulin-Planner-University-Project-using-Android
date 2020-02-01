@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,16 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserLogIn"></activity>
-        <activity android:name=".UserSignUp"></activity>
-        <activity android:name=".DocSignUp"></activity>
+        <activity android:name=".DataClass"></activity>
+        <activity android:name=".CalorieCal" />
+        <activity android:name=".UserLogIn" />
+        <activity android:name=".UserSignUp" />
+        <activity android:name=".DocSignUp" />
         <activity android:name=".Dashboard" />
         <activity android:name=".DocDashboard" />
-        <activity android:name=".FoodDietChart"></activity>
+        <activity android:name=".AddNewEntry" />
+        <activity android:name=".FoodDietChart" />
         <activity android:name=".MainActivity" />
         <activity android:name=".WelcomeActivity">
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

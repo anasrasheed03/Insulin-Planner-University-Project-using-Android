@@ -20,6 +20,8 @@ public class Dashboard extends AppCompatActivity {
         CardView e_Book = findViewById(R.id.e_Book);
         CardView previous_Report = findViewById(R.id.prv_Rprt);
         CardView check_Cal = findViewById(R.id.chk_Cal);
+//        CardView check_Cal = findViewById(R.id.chk_Cal);
+        final String getUserName = getIntent().getStringExtra("userName");
 
         btn_dietChart = (Button) findViewById(R.id.button2);
 
@@ -28,6 +30,16 @@ public class Dashboard extends AppCompatActivity {
             public void onClick(View v) {
                 Intent usr_Lgn = new Intent(Dashboard.this, FoodDietChart.class);
                 startActivity(usr_Lgn);
+            }
+        });
+
+        //intent to calories cal
+        check_Cal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent calCalInt = new Intent(Dashboard.this, CalorieCal.class);
+                calCalInt.putExtra("userName",getUserName);
+                startActivity(calCalInt);
             }
         });
     }
