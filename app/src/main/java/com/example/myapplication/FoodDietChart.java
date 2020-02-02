@@ -52,7 +52,7 @@ public class FoodDietChart extends AppCompatActivity {
         loadProducts();
     }
 
-    private final String URL_PRODUCTS = "http://farwa.plenary-session.com/apis/ebooklist.php";
+    private final String URL_PRODUCTS = "http://farwa.plenary-session.com/apis/foodlist.php";
 
     private void loadProducts() {
 

@@ -23,13 +23,21 @@ public class Dashboard extends AppCompatActivity {
 //        CardView check_Cal = findViewById(R.id.chk_Cal);
         final String getUserName = getIntent().getStringExtra("userName");
 
-        btn_dietChart = (Button) findViewById(R.id.button2);
-
-        btn_dietChart.setOnClickListener(new View.OnClickListener() {
+        //Intent to Diet Chart
+        diet_Chart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent usr_Lgn = new Intent(Dashboard.this, FoodDietChart.class);
                 startActivity(usr_Lgn);
+            }
+        });
+
+        //intent to Ebook
+        e_Book.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ebokInt = new Intent(Dashboard.this, Ebook.class);
+                startActivity(ebokInt);
             }
         });
 
@@ -42,6 +50,19 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(calCalInt);
             }
         });
+
+        // Intent to previous reports
+        previous_Report.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent prvRprtInt = new Intent(Dashboard.this, DisplayLogActivity.class);
+                startActivity(prvRprtInt);
+            }
+        });
+
     }
+
+
+
 
 }

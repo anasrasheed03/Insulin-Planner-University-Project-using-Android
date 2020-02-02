@@ -6,9 +6,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#30D5C8"
-    tools:context=".FoodDietChart">
+    tools:context=".FoodDietChart"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_height="wrap_content" >
 
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0px"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#333"
+        android:text="Food Name" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0px"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:textColor="#333"
+        android:layout_height="wrap_content"
+        android:text="Food Quantity" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0px"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:textColor="#333"
+        android:layout_height="wrap_content"
+        android:text="Food Calories" />
+    </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"

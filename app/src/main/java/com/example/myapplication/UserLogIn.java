@@ -28,6 +28,7 @@ import java.util.Map;
 public class UserLogIn extends AppCompatActivity {
 
     // declare the variables
+    private TextView link_register;
     private EditText email;
     private EditText password;
     private Button btn_login;
@@ -48,7 +49,7 @@ public class UserLogIn extends AppCompatActivity {
         password = findViewById(R.id.password);
         btn_login = findViewById(R.id.btn_login);
         //btnlog_out = findViewById(R.id.log_out);
-        TextView link_register = findViewById(R.id.link_regist);
+        link_register = findViewById(R.id.link_regist);
 
 
         // click listenr for logging a user
@@ -87,6 +88,7 @@ public class UserLogIn extends AppCompatActivity {
 
         loading.setVisibility(View.VISIBLE);
         btn_login.setVisibility(View.GONE);
+        link_register.setVisibility(View.INVISIBLE);
 
 
         String URL_LOGIN = "http://farwa.plenary-session.com/apis/login.php";

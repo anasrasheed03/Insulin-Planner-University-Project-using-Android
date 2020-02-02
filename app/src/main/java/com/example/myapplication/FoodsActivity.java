@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -86,7 +87,7 @@ public class FoodsActivity extends AppCompatActivity {
                                         Fatwa.getString("foodCalorie")
                                 ));
                             }
-
+Log.d("Food Data:", foodList.toString());
                             //creating adapter object and setting it to recyclerview
                             FoodsAdapter adapter = new FoodsAdapter(FoodsActivity.this, foodList);
 

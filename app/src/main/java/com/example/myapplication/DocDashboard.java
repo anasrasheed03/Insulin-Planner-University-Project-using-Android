@@ -20,7 +20,23 @@ public class DocDashboard extends AppCompatActivity {
         CardView e_Book = findViewById(R.id.e_Book);
         CardView previous_Report = findViewById(R.id.prv_Rprt);
 
+        //Intent to Diet Chart
+        diet_Chart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent usr_Lgn = new Intent(DocDashboard.this, FoodDietChart.class);
+                startActivity(usr_Lgn);
+            }
+        });
 
+        //intent to Ebook
+        e_Book.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ebokInt = new Intent(DocDashboard.this, Ebook.class);
+                startActivity(ebokInt);
+            }
+        });
     }
 
 }

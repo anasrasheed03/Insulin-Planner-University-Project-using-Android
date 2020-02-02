@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DataClass"></activity>
+        <activity android:name=".Ebook"></activity>
+        <activity android:name=".DataClass" />
         <activity android:name=".CalorieCal" />
         <activity android:name=".UserLogIn" />
         <activity android:name=".UserSignUp" />
@@ -20,6 +21,7 @@
         <activity android:name=".DocDashboard" />
         <activity android:name=".AddNewEntry" />
         <activity android:name=".FoodDietChart" />
+        <activity android:name=".DisplayLogActivity"/>
         <activity android:name=".MainActivity" />
         <activity android:name=".WelcomeActivity">
             <intent-filter>

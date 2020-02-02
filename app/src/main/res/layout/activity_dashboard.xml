@@ -91,11 +91,7 @@
                             android:textColor="@android:color/black"
                             tools:ignore="HardcodedText" />
 
-                        <Button
-                            android:id="@+id/button2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="View" />
+
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>

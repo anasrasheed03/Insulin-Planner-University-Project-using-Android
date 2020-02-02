@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -18,9 +19,13 @@ public class DisplayLogActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_log);
+//        if(lv.getCount() == 0){
+//            Toast.makeText(DisplayLogActivity.this,"No data to show", Toast.LENGTH_SHORT).show();;
+//        }
         lv = (ListView) findViewById(R.id.log_list);
         title = (TextView) findViewById(R.id.title);
         lv.setEmptyView(findViewById(R.id.noData));
+
 
     }
 
@@ -32,9 +37,14 @@ public class DisplayLogActivity extends Activity {
 
     /** Displays the calorie log entry data **/
     private void displayLogEntries() {
-        lv.setAdapter(new DisplayLogAdapter(this, LogManager.getLogEntries()));
+        if(LogManager.getLogEntries().size() != 0 ) {
+            lv.setAdapter(new DisplayLogAdapter(this, LogManager.getLogEntries()));
             lv.setTextFilterEnabled(true);
-
+        }
+        else
+        {
+            Toast.makeText(DisplayLogActivity.this,"No data to show", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
