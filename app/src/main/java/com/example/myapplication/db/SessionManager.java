@@ -1,15 +1,16 @@
-package com.example.myapplication;
+package com.example.myapplication.db;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 
+import com.example.myapplication.ui.UserLogIn;
+
 import java.util.HashMap;
 
 @SuppressWarnings("ALL")
-class SessionManager extends Fragment {
+public  class SessionManager extends Fragment {
 
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;

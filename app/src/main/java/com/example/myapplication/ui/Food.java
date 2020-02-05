@@ -1,7 +1,11 @@
-package com.example.myapplication;
+package com.example.myapplication.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.myapplication.R;
+//import com.example.myapplication.SessionManager;
+import com.example.myapplication.db.SessionManager;
 
 import java.util.HashMap;
 

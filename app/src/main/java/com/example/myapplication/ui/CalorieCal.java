@@ -1,10 +1,9 @@
-package com.example.myapplication;
+package com.example.myapplication.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -14,6 +13,10 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.myapplication.model.DataClass;
+import com.example.myapplication.R;
+import com.example.myapplication.db.SQLiteHandler;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

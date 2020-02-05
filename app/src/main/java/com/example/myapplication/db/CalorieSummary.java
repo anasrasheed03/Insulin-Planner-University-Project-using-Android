@@ -1,7 +1,10 @@
-package com.example.myapplication;
+package com.example.myapplication.db;
 
 import android.app.Activity;
 import android.widget.TextView;
+
+import com.example.myapplication.R;
+import com.example.myapplication.db.LogEntry;
 
 import java.util.Date;
 import java.util.List;

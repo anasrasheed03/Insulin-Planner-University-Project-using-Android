@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +17,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.myapplication.R;
+
+import com.example.myapplication.db.SessionManager;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,7 +36,7 @@ public class UserLogIn extends AppCompatActivity {
     private EditText password;
     private Button btn_login;
     private ProgressBar loading;
-    private SessionManager sessionManager;
+    public SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,13 +128,13 @@ public class UserLogIn extends AppCompatActivity {
                                     sessionManager.createSession(email, id, role);
 
                                     if (role.equals("2")) {
-                                        Intent se = new Intent(UserLogIn.this,Dashboard.class);
+                                        Intent se = new Intent(UserLogIn.this, Dashboard.class);
                                         se.putExtra("userName", userName);
                                         startActivity(se);
                                     }
 
                                     else if (role.equals("1")) {
-                                        Intent se = new Intent(UserLogIn.this,DocDashboard.class);
+                                        Intent se = new Intent(UserLogIn.this, DocDashboard.class);
                                         startActivity(se);
                                     }
 

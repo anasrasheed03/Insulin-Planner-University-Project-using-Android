@@ -8,22 +8,24 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Ebook"></activity>
-        <activity android:name=".DataClass" />
-        <activity android:name=".CalorieCal" />
-        <activity android:name=".UserLogIn" />
-        <activity android:name=".UserSignUp" />
-        <activity android:name=".DocSignUp" />
-        <activity android:name=".Dashboard" />
-        <activity android:name=".DocDashboard" />
-        <activity android:name=".AddNewEntry" />
-        <activity android:name=".FoodDietChart" />
-        <activity android:name=".DisplayLogActivity"/>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".WelcomeActivity">
+        <activity android:name=".ui.Calculator"></activity>
+        <activity android:name=".ui.Ebook" />
+        <activity android:name=".model.DataClass" />
+        <activity android:name=".ui.CalorieCal" />
+        <activity android:name=".ui.UserLogIn" />
+        <activity android:name=".ui.UserSignUp" />
+        <activity android:name=".ui.DocSignUp" />
+        <activity android:name=".ui.Dashboard" />
+        <activity android:name=".ui.DocDashboard" />
+        <activity android:name=".ui.AddNewEntry" />
+        <activity android:name=".ui.FoodDietChart" />
+        <activity android:name=".adapters.DisplayLogActivity" />
+        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.myapplication.model.EbookData;
+import com.example.myapplication.R;
 
 import java.util.List;
 
@@ -24,7 +26,7 @@ public class EbookAdapter extends RecyclerView.Adapter<EbookAdapter.EbookViewHol
 
     private static int currentPosition = 0;
 
-    EbookAdapter(List<EbookData> heroList, Context context) {
+  public   EbookAdapter(List<EbookData> heroList, Context context) {
         this.heroList = heroList;
         this.context = context;
     }

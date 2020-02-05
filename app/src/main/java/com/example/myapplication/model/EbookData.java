@@ -1,10 +1,10 @@
-package com.example.myapplication;
+package com.example.myapplication.model;
 
 public class EbookData {
 //    private  int id;
     private  String id ,bookName, title, shortDescp, bookTopic, bookTxt, docEmail;
 
-    EbookData(String id, String bookName, String title, String shortDescp, String bookTopic, String bookTxt, String docEmail) {
+    public EbookData(String id, String bookName, String title, String shortDescp, String bookTopic, String bookTxt, String docEmail) {
         this.id = id;
         this.bookName = bookName;
         this.title = title;

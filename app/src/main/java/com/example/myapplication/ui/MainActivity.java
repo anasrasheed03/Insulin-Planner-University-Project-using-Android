@@ -1,10 +1,12 @@
-package com.example.myapplication;
+package com.example.myapplication.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.myapplication.R;
 
 public class MainActivity extends AppCompatActivity {
     private Button btn_UsrLgn, btn_DctLgn, btn_UsrSgn, btn_DctSgn;

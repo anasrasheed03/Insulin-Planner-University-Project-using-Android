@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.myapplication.R;
 
 public class DocDashboard extends AppCompatActivity {
     private Button btn_dietChart, btn_DctLgn, btn_UsrSgn, btn_DctSgn;

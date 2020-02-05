@@ -3,7 +3,7 @@
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".DisplayLogActivity"
+tools:context=".adapters.DisplayLogActivity"
 android:background="#30D5C8"
     android:orientation="vertical" >
 

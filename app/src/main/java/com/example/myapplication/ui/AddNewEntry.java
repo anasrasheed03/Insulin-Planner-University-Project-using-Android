@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.ui;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.myapplication.db.LogEntry;
+import com.example.myapplication.db.LogManager;
+import com.example.myapplication.R;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

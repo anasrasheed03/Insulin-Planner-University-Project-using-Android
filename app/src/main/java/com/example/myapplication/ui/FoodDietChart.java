@@ -1,6 +1,5 @@
-package com.example.myapplication;
+package com.example.myapplication.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,13 +11,16 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.myapplication.adapters.FoodsAdapter;
+import com.example.myapplication.R;
+//import com.example.myapplication.SessionManager;
+import com.example.myapplication.db.SessionManager;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class FoodDietChart extends AppCompatActivity {

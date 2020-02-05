@@ -1,10 +1,12 @@
-package com.example.myapplication;
+package com.example.myapplication.db;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.example.myapplication.model.Users;
 
 public class SQLiteHandler extends SQLiteOpenHelper {
     private static final int DATABSE_VERSION = 1;

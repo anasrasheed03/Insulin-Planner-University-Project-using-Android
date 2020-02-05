@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.ui;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -16,6 +16,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.myapplication.adapters.MyPagerAdapter;
+import com.example.myapplication.R;
 
 public class WelcomeActivity extends AppCompatActivity {
 

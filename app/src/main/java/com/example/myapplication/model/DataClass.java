@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.model;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -9,6 +9,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.myapplication.db.CalorieSummary;
+import com.example.myapplication.adapters.DisplayLogActivity;
+import com.example.myapplication.db.LogEntry;
+import com.example.myapplication.db.LogManager;
+import com.example.myapplication.R;
+import com.example.myapplication.db.SQLiteHandler;
+import com.example.myapplication.ui.AddNewEntry;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.adapters;
 
 
 import android.app.Activity;
@@ -8,7 +8,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.example.myapplication.db.LogManager;
+import com.example.myapplication.R;
 
 public class DisplayLogActivity extends Activity {
 
